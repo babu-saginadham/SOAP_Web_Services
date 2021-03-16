@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://com/pmsgate/schemas" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+	targetNamespace="http://com/pmsgate/schemas" elementFormDefault="qualified" jaxb:version="2.0">
+
+
+<xs:element name="StudentLookupRequest">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="studNo" type="xs:int" minOccurs="1" />
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="StudentLookupResponse">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="result" type="xs:string" minOccurs="1" />
+		   	<xs:element name="studNo" type="xs:string" minOccurs="1" />
+		   	<xs:element name="studName" type="xs:string" minOccurs="1" />			
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<xs:element name="StudentDetailsRequest">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="studNo" type="xs:string" minOccurs="1"/>
+			<xs:element name="studName" type="xs:string" minOccurs="1"/>
+			<xs:element name="studAdd" type="xs:string" minOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="StudentDetailsResponse">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="studNo" type="xs:string" minOccurs="1"/>
+			<xs:element name ="studName" type ="xs:string" minOccurs="1"/>
+			<xs:element name="studAddress" type="xs:string" minOccurs="1"/>
+			<xs:element name="contactNo" type="xs:string" minOccurs="1"/>
+			</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+<!-- Create Operation -->
+<xs:element name="StudentCreationRequest">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="studName" type="xs:string" minOccurs="0"/>
+			<xs:element name="studAdd" type="xs:string" minOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+<xs:element name="StudentCreationResponse">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="studNo" type="xs:string" minOccurs="1"/>
+			<xs:element name ="studName" type ="xs:string" minOccurs="1"/>
+			<xs:element name="studAddress" type="xs:string" minOccurs="1"/>
+			</xs:sequence>
+	</xs:complexType>
+</xs:element>
+
+</xs:schema>
